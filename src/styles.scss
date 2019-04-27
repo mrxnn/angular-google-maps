@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Niramit';
+  color: black !important;
+  overflow: hidden;
+  box-sizing: border-box;
+}

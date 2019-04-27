@@ -1,0 +1,32 @@
+<div class="page">
+  <!--sidebar starts-->
+  <div class="sidebar">
+    <h4><strong>Angular + Google Maps</strong></h4>
+    <p style="margin-bottom: 50px;">
+      This is a demo application that will showcase some of the features available in Google Maps using Angular 7. 
+      Visit <a href="https://developers.google.com/maps/documentation/">Official Docs</a> for complete guide.
+      Download the source from <a href="http://github.com/mayurax/angular-google-maps-demo">GitHub.</a>
+    </p>
+
+    <label>1 &mdash; Select map type</label>
+    <select (change)="setMapType($event.target.value)" style="margin-bottom: 30px;">
+      <option value="roadmap">Roadmap</option>
+      <option value="terrain">Terrain</option>
+      <option value="satellite">Satellite</option>
+      <option value="hybrid">Hybrid</option>
+    </select>
+
+    <label>2 &mdash; Add a marker + Autocomplete</label>
+    <input type="text" placeholder="Location" #addMarkerField>
+    <button (click)="removeAllMarkers()" style="margin-bottom: 35px;">Remove all markers</button>
+
+    <label>3 &mdash; Find directions</label>
+    <input type="text" placeholder="Starting Point" #startingPointField>
+    <input type="text" placeholder="Ending Point" #endingPointField>
+    <button class="mr-5" (click)="findRoute()">Find</button>
+  </div>
+  <!--sidebar ends-->
+
+  <!--google map-->
+  <div #gmap class="map-styles"></div>
+</div>
